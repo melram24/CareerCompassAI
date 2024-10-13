@@ -1,0 +1,22 @@
+{
+  "recommendations": [
+    {
+      "career_path": "Data Analyst",
+      "description": "As a Data Analyst, you will analyze data to help businesses make informed decisions.",
+      "skills_needed": ["SQL", "Excel", "Data Visualization tools"],
+      "learning_style": "Hands-on projects"
+    },
+    {
+      "career_path": "Machine Learning Engineer",
+      "description": "A Machine Learning Engineer builds models that allow computers to learn from and make predictions based on data.",
+      "skills_needed": ["Python", "TensorFlow", "PyTorch"],
+      "learning_style": "Ideal for those who learn through coding"
+    },
+    {
+      "career_path": "Software Developer",
+      "description": "Software Developers create applications or systems that run on computers or mobile devices.",
+      "skills_needed": ["Java", "C++", "Problem-solving"],
+      "learning_style": "Learning through building projects"
+    }
+  ]
+}
