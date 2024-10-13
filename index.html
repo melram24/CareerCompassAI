@@ -142,32 +142,28 @@
         <button type="button" onclick="redirectToCareerPath()">Get Career Pathway Recommendations</button>
     </form>
 </div>
-<script src="https://sdk.amazonaws.com/js/aws-sdk-2.799.0.min.js"></script>
 
 <script>
-    AWS.config.update({
+   /* AWS.config.update({
         region: 'your-region',
         accessKeyId: 'your-access-key-id',
         secretAccessKey: 'your-secret-access-key'
-    });
+    });*/
 
-    const s3 = new AWS.S3();
+   // const s3 = new AWS.S3();
 
+    <script>
     function redirectToCareerPath() {
         const background = document.getElementById('background').value;
-        const goals = document.getElementById('Goals').value;
         const interests = document.getElementById('interests').value;
         const learningStyle = document.getElementById('learningStyle').value;
 
-        if (background && goals && interests && learningStyle) {
-            const userData = {
-                background: background,
-                goals: goals,
-                interests: interests.split(','),
-                learningStyle: learningStyle
-            };
+        const url = careerPath.html?background=${encodeURIComponent(background)}&interests=${encodeURIComponent(interests)}&learningStyle=${encodeURIComponent(learningStyle)};
+        window.location.href = url;
+    }
 
-          /*  const params = {
+
+         /*   const params = {
                 Bucket: 'your-bucket-name',
                 Key: `user-input/${Date.now()}.json`,
                 Body: JSON.stringify(userData),
@@ -184,10 +180,8 @@
                     alert('Your data has been submitted. Generating recommendations...');
                 }
             });
-        } */else {
-            alert('Please fill in all required fields.');
-        }
-    }
+        } */
+    
    /* function fetchRecommendations() {
         fetch('https://s3.amazonaws.com/your-bucket-name/recommendations/output.json')
             .then(response => response.json())
